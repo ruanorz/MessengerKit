@@ -24,11 +24,15 @@ public class MSGMessage: NSObject{
     /// The time that the message was sent.
     public let sentAt: Date
     
-    public init(id: Int, body: MSGMessageBody, user: MSGUser, sentAt: Date) {
+    /// Real app message ID.
+    public let appMessageID: String
+    
+    public init(id: Int, body: MSGMessageBody, user: MSGUser, sentAt: Date, appMessageID: String) {
         self.id = id
         self.body = body
         self.user = user
         self.sentAt = sentAt
+        self.appMessageID = appMessageID
     }
     
 }
